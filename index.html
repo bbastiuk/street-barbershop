@@ -158,7 +158,11 @@
     mix-blend-mode:overlay;
     pointer-events:none;
   }
-  .hero-logo{width:230px;margin-bottom:18px;position:relative;z-index:2;filter:drop-shadow(0 8px 26px rgba(0,0,0,0.6));}
+  .hero::before{
+    content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+    background:url('assets/logo.png') center 44%/min(82%,480px) no-repeat;
+    opacity:0.12;
+  }
   .hero h1{
     font-size:clamp(2.6rem,7vw,5.4rem);
     line-height:0.95;
@@ -464,7 +468,6 @@
     .brand span{font-size:0.9rem;}
     .brand img{height:30px;}
     .hero{padding:94px 20px 64px;min-height:100vh;min-height:100dvh;}
-    .hero-logo{width:190px;margin-bottom:16px;}
     .hero p.tagline{font-size:1.02rem;}
     .hero-meta{gap:10px;}
     .chip{font-size:0.76rem;padding:7px 12px;}
@@ -545,10 +548,10 @@
 <body>
 
 <header>
-  <div class="brand">
+  <a class="brand" href="#top" onclick="event.preventDefault();window.scrollTo({top:0,behavior:'smooth'});" aria-label="Na górę / do początku">
     <img src="assets/logo.png" alt="Street Barbershop logo">
     <span><span class="street">STREET</span> <span class="barbershop">BARBERSHOP</span></span>
-  </div>
+  </a>
   <nav class="mobile-hide">
     <ul>
       <li><a href="#about" id="nav-about">O nas</a></li>
@@ -586,7 +589,6 @@
 </div>
 
 <section class="hero">
-  <img class="hero-logo" src="assets/logo.png" alt="Street Barbershop">
   <h1><span class="line1">STREET</span><span class="line2">BARBERSHOP</span></h1>
   <p class="tagline" id="hero-tagline">Strzyżenie, broda, koloryzacja i trwała na Ratajach.</p>
   <div class="hero-meta">
