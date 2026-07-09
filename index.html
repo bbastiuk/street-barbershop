@@ -170,11 +170,12 @@
   }
   .hero h1 .line1{color:var(--red);display:block;}
   .hero h1 .line2{color:var(--white);display:block;}
-  .hero p.tagline{
-    margin-top:20px;font-size:1.15rem;color:var(--white);opacity:0.85;
-    width:100%;max-width:480px;position:relative;z-index:2;
-    font-weight:300;
+  .hero-address{
+    margin-top:22px;display:inline-flex;align-items:center;gap:10px;
+    font-family:'Sora',sans-serif;font-size:1.45rem;font-weight:600;color:var(--white);
+    letter-spacing:0.01em;position:relative;z-index:2;max-width:100%;
   }
+  .hero-address svg{width:23px;height:23px;fill:none;stroke:var(--red);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none;}
   .hero-meta{
     margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center;
     max-width:100%;position:relative;z-index:2;
@@ -468,7 +469,7 @@
     .brand span{font-size:0.9rem;}
     .brand img{height:30px;}
     .hero{padding:94px 20px 64px;min-height:100vh;min-height:100dvh;}
-    .hero p.tagline{font-size:1.02rem;}
+    .hero-address{font-size:1.2rem;}
     .hero-meta{gap:10px;}
     .chip{font-size:0.76rem;padding:7px 12px;}
     .hero-ctas{width:100%;max-width:340px;flex-direction:column;gap:12px;}
@@ -590,10 +591,9 @@
 
 <section class="hero">
   <h1><span class="line1">STREET</span><span class="line2">BARBERSHOP</span></h1>
-  <p class="tagline" id="hero-tagline">Strzyżenie, broda, koloryzacja i trwała na Ratajach.</p>
+  <p class="hero-address"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Rataje 166B, Poznań</p>
   <div class="hero-meta">
     <div class="chip" id="chip-rating">★ <b>4,9</b> · 3165 opinii</div>
-    <div class="chip" id="chip-addr">Rataje 166B, Poznań</div>
     <div class="chip" id="chip-hours"><b>Otwarte</b> 7 dni w tygodniu</div>
     <div class="chip">PL · UA</div>
   </div>
@@ -845,7 +845,6 @@ const translations = {
   ua: {
     'nav-about':'Про нас','nav-masters':'Майстри','nav-services':'Послуги','nav-location':'Адреса','nav-cta':'Записатися',
     'mm-about':'Про нас','mm-masters':'Майстри','mm-services':'Послуги і ціни','mm-reviews':'Відгуки','mm-location':'Адреса і графік','mm-book':'Записатися онлайн',
-    'hero-tagline':'Стрижка, борода, колоризація і завивка на Ратаях.',
     'hero-cta1':'Записатися онлайн','hero-call':'Подзвонити',
     'about-eyebrow':'// про заклад',
     'about-p1':'Street Barbershop — твій стиль, твоя вулиця. Сучасний барбершоп на Ратаях у Познані.',
