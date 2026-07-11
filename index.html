@@ -706,7 +706,6 @@ src="https://www.facebook.com/tr?id=1688040235780349&ev=PageView&noscript=1"
     <div class="about-grid">
       <div>
         <p id="about-p1">Street Barbershop – Twój styl, Twoja ulica. Nowoczesny barbershop na Ratajach w Poznaniu.</p>
-        <p id="about-p2">Strzyżenie i broda po polsku i po ukraińsku, w luźnej, ulicznej atmosferze. Wpadnij bez umawiania albo zarezerwuj online.</p>
         <div class="badge-row">
           <span class="badge" id="badge-1">Otwarci 7 dni w tygodniu</span>
           <span class="badge" id="badge-2">Karty podarunkowe Booksy</span>
@@ -925,7 +924,6 @@ const translations = {
     'hero-cta1':'Записатися онлайн','hero-call':'Подзвонити',
     'about-eyebrow':'// про заклад',
     'about-p1':'Street Barbershop — твій стиль, твоя вулиця. Сучасний барбершоп на Ратаях у Познані.',
-    'about-p2':'Стрижка й борода польською та українською, у невимушеній вуличній атмосфері. Заходь без запису або бронюй онлайн.',
     'stat-l1':'Рейтинг Google','stat-l2':'Відгуків','stat-l3':'Мови','stat-l4':'Працюємо','stat-v4':'7 днів',
     'badge-1':'Відкриті 7 днів на тиждень','badge-2':'Подарункові картки Booksy','badge-3':'Виїзна послуга',
     'week-title':'Не треба чекати до понеділка','week-sub':'Ми відкриті 7 днів на тиждень — обирай час, коли зручно тобі.','week-cta':'Обрати час',
@@ -1083,7 +1081,7 @@ document.querySelectorAll('[data-track]').forEach(function(el){
     if (typeof fbq === 'function'){
       switch (ev){
         case 'booking_click':  fbq('track', 'Lead', { content_name: 'booking', source: loc }); break;
-        case 'phone_click':    fbq('track', 'Contact', { source: loc }); break;
+        case 'phone_click':    fbq('track', 'Contact', { source: loc }); fbq('trackCustom', 'PhoneClick', { source: loc }); break;
         case 'service_click':  fbq('trackCustom', 'ServiceClick', { service: svc, source: loc }); break;
         case 'map_click':      fbq('trackCustom', 'MapClick', { source: loc }); break;
         case 'instagram_click':fbq('trackCustom', 'InstagramClick', { source: loc }); break;
