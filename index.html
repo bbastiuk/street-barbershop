@@ -9,6 +9,23 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1688040235780349');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1688040235780349&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <style>
   :root{
     --bg:#0a0a0a;
@@ -983,19 +1000,31 @@ window.dataLayer = window.dataLayer || [];
   }
 })();
 
-// Push a dataLayer event for every click on a [data-track] element
+// Push a dataLayer event + fire Meta Pixel for every click on a [data-track] element
 document.querySelectorAll('[data-track]').forEach(function(el){
   el.addEventListener('click', function(){
     var ev = el.dataset.track;
+    var loc = el.dataset.location || '';
+    var svc = el.dataset.service || '';
     window.dataLayer.push({
-      event: ev,
-      location: el.dataset.location || '',
-      service: el.dataset.service || '',
+      event: ev, location: loc, service: svc,
       button_text: (el.textContent || '').replace(/\s+/g,' ').trim().slice(0,60)
     });
     // extra "lead" signal for ad optimization on the strongest actions
     if (ev === 'booking_click' || ev === 'phone_click'){
-      window.dataLayer.push({ event: 'lead', lead_type: ev, location: el.dataset.location || '' });
+      window.dataLayer.push({ event: 'lead', lead_type: ev, location: loc });
+    }
+    // Meta Pixel events
+    if (typeof fbq === 'function'){
+      switch (ev){
+        case 'booking_click':  fbq('track', 'Lead', { content_name: 'booking', source: loc }); break;
+        case 'phone_click':    fbq('track', 'Contact', { source: loc }); break;
+        case 'service_click':  fbq('trackCustom', 'ServiceClick', { service: svc, source: loc }); break;
+        case 'map_click':      fbq('trackCustom', 'MapClick', { source: loc }); break;
+        case 'instagram_click':fbq('trackCustom', 'InstagramClick', { source: loc }); break;
+        case 'price_click':    fbq('trackCustom', 'ViewPrices', { source: loc }); break;
+        case 'reviews_click':  fbq('trackCustom', 'ReviewsClick', { source: loc }); break;
+      }
     }
   });
 });
