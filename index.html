@@ -1035,6 +1035,15 @@ function markToday(){
 markToday();
 cacheOriginals();
 
+// Deep-link: ?lang=ua (or ?lang=uk) opens the site in Ukrainian automatically
+(function(){
+  var lang = new URLSearchParams(location.search).get('lang');
+  if(lang){
+    lang = lang.toLowerCase();
+    if(lang === 'ua' || lang === 'uk') setLang('ua');
+  }
+})();
+
 /* ================= Analytics / tracking prep (GTM / Meta Pixel ready) ================= */
 window.dataLayer = window.dataLayer || [];
 
