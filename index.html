@@ -285,7 +285,7 @@ src="https://www.facebook.com/tr?id=1688040235780349&ev=PageView&noscript=1"
 
   /* MASTERS */
   .masters-grid{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+    display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
     background:var(--line);margin-top:44px;border:1px solid var(--line);
   }
   .master-card{
@@ -300,7 +300,6 @@ src="https://www.facebook.com/tr?id=1688040235780349&ev=PageView&noscript=1"
     font-family:var(--font-display);font-size:1.6rem;
     border:2px solid var(--red);color:var(--red);
   }
-  .master-card:nth-child(2) .initial{border-color:var(--white);color:var(--white);}
   .master-card:nth-child(3) .initial{border-color:var(--red);color:var(--red);}
   .master-photo{
     width:138px;height:138px;border-radius:50%;
@@ -311,7 +310,6 @@ src="https://www.facebook.com/tr?id=1688040235780349&ev=PageView&noscript=1"
     transition:filter .35s, transform .35s;
   }
   .master-card:hover .master-photo{filter:grayscale(1);transform:scale(1.04);}
-  .master-card:nth-child(2) .master-photo{border-color:var(--white);}
   .master-card:nth-child(3) .master-photo{border-color:var(--red);}
   .master-card h3{font-size:1.2rem;margin-bottom:6px;}
   .master-card .role{color:var(--grey);font-size:0.82rem;text-transform:uppercase;letter-spacing:0.08em;}
@@ -613,7 +611,7 @@ src="https://www.facebook.com/tr?id=1688040235780349&ev=PageView&noscript=1"
   "image": "https://streetbarbershop.cc/assets/og-cover.jpg",
   "logo": "https://streetbarbershop.cc/assets/logo.png",
   "telephone": "+48537687748",
-  "priceRange": "30–300 zł",
+  "priceRange": "30–350 zł",
   "currenciesAccepted": "PLN",
   "paymentAccepted": "Gotówka, Karta",
   "address": {
@@ -637,10 +635,10 @@ src="https://www.facebook.com/tr?id=1688040235780349&ev=PageView&noscript=1"
   ],
   "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "3165" },
   "makesOffer": [
-    { "@type": "Offer", "priceCurrency": "PLN", "price": "100", "itemOffered": { "@type": "Service", "name": "Strzyżenie" } },
-    { "@type": "Offer", "priceCurrency": "PLN", "price": "80", "itemOffered": { "@type": "Service", "name": "Broda" } },
-    { "@type": "Offer", "priceCurrency": "PLN", "price": "150", "itemOffered": { "@type": "Service", "name": "Combo (strzyżenie + broda)" } },
-    { "@type": "Offer", "priceCurrency": "PLN", "price": "300", "itemOffered": { "@type": "Service", "name": "Trwała" } }
+    { "@type": "Offer", "priceCurrency": "PLN", "price": "110", "itemOffered": { "@type": "Service", "name": "Strzyżenie" } },
+    { "@type": "Offer", "priceCurrency": "PLN", "price": "90", "itemOffered": { "@type": "Service", "name": "Broda" } },
+    { "@type": "Offer", "priceCurrency": "PLN", "price": "160", "itemOffered": { "@type": "Service", "name": "Combo (strzyżenie + broda)" } },
+    { "@type": "Offer", "priceCurrency": "PLN", "price": "350", "itemOffered": { "@type": "Service", "name": "Trwała" } }
   ]
 }
 </script>
@@ -757,18 +755,10 @@ src="https://www.facebook.com/tr?id=1688040235780349&ev=PageView&noscript=1"
         </div>
       </div>
       <div class="master-card">
-        <img class="master-photo" src="assets/artem.jpeg" alt="Artem — barber" loading="lazy">
-        <div class="master-info">
-          <h3>Artem</h3>
-          <div class="role" id="m2-price">Strzyżenie od 100 zł</div>
-          <a class="master-book" id="book-2" href="https://street-barbershop.booksy.com/h/" target="_blank" rel="noopener" data-track="booking_click" data-location="team_artem">Umów wizytę</a>
-        </div>
-      </div>
-      <div class="master-card">
         <img class="master-photo" src="assets/liliia.jpeg" alt="Liliia — barber" loading="lazy">
         <div class="master-info">
           <h3>Liliia</h3>
-          <div class="role" id="m3-price">Strzyżenie od 100 zł</div>
+          <div class="role" id="m3-price">Strzyżenie od 110 zł</div>
           <a class="master-book" id="book-3" href="https://street-barbershop.booksy.com/h/" target="_blank" rel="noopener" data-track="booking_click" data-location="team_liliia">Umów wizytę</a>
         </div>
       </div>
@@ -786,9 +776,9 @@ src="https://www.facebook.com/tr?id=1688040235780349&ev=PageView&noscript=1"
     <div class="block-label" id="pop-label">Popularne <span class="accent">usługi</span></div>
     <div class="pop-grid">
       <a class="pop-card" href="https://street-barbershop.booksy.com/h/" target="_blank" rel="noopener" data-track="service_click" data-location="services" data-service="strzyzenie"><svg class="ico pc-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg><div class="pc-name" id="pop-1">Strzyżenie</div><div class="pc-price" id="pop-1-price">od 80 zł</div></a>
-      <a class="pop-card" href="https://street-barbershop.booksy.com/h/" target="_blank" rel="noopener" data-track="service_click" data-location="services" data-service="broda"><svg class="ico pc-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><div class="pc-name" id="pop-2">Broda</div><div class="pc-price">80 zł</div></a>
-      <a class="pop-card" href="https://street-barbershop.booksy.com/h/" target="_blank" rel="noopener" data-track="service_click" data-location="services" data-service="combo"><svg class="ico pc-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg><div class="pc-name" id="pop-3">Combo</div><div class="pc-price">150 zł</div></a>
-      <a class="pop-card" href="https://street-barbershop.booksy.com/h/" target="_blank" rel="noopener" data-track="service_click" data-location="services" data-service="trwala"><svg class="ico pc-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg><div class="pc-name" id="pop-4">Trwała</div><div class="pc-price">300 zł</div><div class="pc-note" id="pop-4n">konsultacja bezpłatna</div></a>
+      <a class="pop-card" href="https://street-barbershop.booksy.com/h/" target="_blank" rel="noopener" data-track="service_click" data-location="services" data-service="broda"><svg class="ico pc-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><div class="pc-name" id="pop-2">Broda</div><div class="pc-price">90 zł</div></a>
+      <a class="pop-card" href="https://street-barbershop.booksy.com/h/" target="_blank" rel="noopener" data-track="service_click" data-location="services" data-service="combo"><svg class="ico pc-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg><div class="pc-name" id="pop-3">Combo</div><div class="pc-price">160 zł</div></a>
+      <a class="pop-card" href="https://street-barbershop.booksy.com/h/" target="_blank" rel="noopener" data-track="service_click" data-location="services" data-service="trwala"><svg class="ico pc-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg><div class="pc-name" id="pop-4">Trwała</div><div class="pc-price">350 zł</div><div class="pc-note" id="pop-4n">konsultacja bezpłatna</div></a>
     </div>
 
     <div class="trwala-card">
@@ -805,24 +795,27 @@ src="https://www.facebook.com/tr?id=1688040235780349&ev=PageView&noscript=1"
       <div class="cennik-body">
     <div class="price-cols">
       <div>
-        <div class="price-row"><span class="name" id="s-strzyzenie">Strzyżenie (krótkie włosy)</span><span class="dots"></span><span class="price" id="s-strzyzenie-p">80–100 zł</span></div>
-        <div class="price-row"><span class="name" id="s-broda">Broda</span><span class="dots"></span><span class="price">80 zł</span></div>
-        <div class="price-row"><span class="name" id="s-combo">Combo (fade + broda)</span><span class="dots"></span><span class="price">150 zł</span></div>
-        <div class="price-row"><span class="name" id="s-dlugie">Długie włosy</span><span class="dots"></span><span class="price">150 zł</span></div>
-        <div class="price-row"><span class="name" id="s-dlugie-broda">Długie włosy + broda</span><span class="dots"></span><span class="price">180 zł</span></div>
-        <div class="price-row"><span class="name" id="s-broda-farb">Broda + farbowanie</span><span class="dots"></span><span class="price">130 zł</span></div>
-        <div class="price-row"><span class="name" id="s-broda-glowa">Broda + głowa na jedną długość</span><span class="dots"></span><span class="price">110 zł</span></div>
-        <div class="price-row"><span class="name" id="s-ojciec">Ojciec + syn</span><span class="dots"></span><span class="price">170 zł</span></div>
+        <div class="price-row"><span class="name" id="s-strzyzenie">Strzyżenie (krótkie włosy)</span><span class="dots"></span><span class="price" id="s-strzyzenie-p">80–110 zł</span></div>
+        <div class="price-row"><span class="name" id="s-strzyz-przy">Strzyżenie + przyciemnienie</span><span class="dots"></span><span class="price">170 zł</span></div>
+        <div class="price-row"><span class="name" id="s-strzyz-dlugie-przy">Strzyżenie długie włosy + przyciemnienie</span><span class="dots"></span><span class="price">210 zł</span></div>
+        <div class="price-row"><span class="name" id="s-dlugie">Włosy długie</span><span class="dots"></span><span class="price">160 zł</span></div>
+        <div class="price-row"><span class="name" id="s-dlugie-broda">Włosy długie + broda</span><span class="dots"></span><span class="price">190 zł</span></div>
+        <div class="price-row"><span class="name" id="s-dlugie-przy">Włosy długie + broda z przyciemnieniem</span><span class="dots"></span><span class="price">250 zł</span></div>
+        <div class="price-row"><span class="name" id="s-niedlugie-przy">Włosy niedługie + broda z przyciemnieniem</span><span class="dots"></span><span class="price">200 zł</span></div>
+        <div class="price-row"><span class="name" id="s-combo">Combo</span><span class="dots"></span><span class="price">160 zł</span></div>
+        <div class="price-row"><span class="name" id="s-combo-przy">Combo + broda i włosy z przyciemnieniem</span><span class="dots"></span><span class="price">250 zł</span></div>
+        <div class="price-row"><span class="name" id="s-ojciec">Ojciec + syn</span><span class="dots"></span><span class="price">180 zł</span></div>
       </div>
       <div>
-        <div class="price-row"><span class="name" id="s-niedlugie-przy">Włosy niedługie + broda z przyciemnieniem</span><span class="dots"></span><span class="price">190 zł</span></div>
-        <div class="price-row"><span class="name" id="s-dlugie-przy">Włosy długie + broda z przyciemnieniem</span><span class="dots"></span><span class="price">200 zł</span></div>
-        <div class="price-row"><span class="name" id="s-pasemka">Pasemka</span><span class="dots"></span><span class="price">250 zł</span></div>
-        <div class="price-row"><span class="name" id="s-trwala">Trwała</span><span class="dots"></span><span class="price">300 zł</span></div>
-        <div class="price-row"><span class="name" id="s-masaz">Masaż + peeling głowy</span><span class="dots"></span><span class="price">60 zł</span></div>
+        <div class="price-row"><span class="name" id="s-broda">Broda</span><span class="dots"></span><span class="price">90 zł</span></div>
+        <div class="price-row"><span class="name" id="s-broda-farb">Broda + farbowanie</span><span class="dots"></span><span class="price">140 zł</span></div>
+        <div class="price-row"><span class="name" id="s-broda-glowa">Broda + głowa na jedną długość</span><span class="dots"></span><span class="price">120 zł</span></div>
+        <div class="price-row"><span class="name" id="s-golenie">Golenie głowy na zero (golarką)</span><span class="dots"></span><span class="price">70 zł</span></div>
+        <div class="price-row"><span class="name" id="s-pasemka">Pasemka</span><span class="dots"></span><span class="price">300 zł</span></div>
+        <div class="price-row"><span class="name" id="s-trwala">Trwała</span><span class="dots"></span><span class="price">350 zł</span></div>
+        <div class="price-row"><span class="name" id="s-masaz">Masaż + peeling głowy</span><span class="dots"></span><span class="price">70 zł</span></div>
         <div class="price-row"><span class="name" id="s-peeling">Peeling twarzy</span><span class="dots"></span><span class="price">30 zł</span></div>
-        <div class="price-row"><span class="name" id="s-depilacja">Depilacja woskiem nosa/brwi/uszu</span><span class="dots"></span><span class="price">30 zł</span></div>
-        <div class="price-row"><span class="name" id="s-manicure">Męski manicure</span><span class="dots"></span><span class="price">80 zł</span></div>
+        <div class="price-row"><span class="name" id="s-depilacja">Depilacja woskiem nosa/brwi/uszu</span><span class="dots"></span><span class="price">40 zł</span></div>
       </div>
     </div>
         <p class="price-note" id="price-note">Dokładna cena zależy od długości włosów i złożoności pracy — dopytaj przy rezerwacji. Cena zależy od barbera — sprawdź w Booksy przy rezerwacji.</p>
@@ -849,7 +842,7 @@ src="https://www.facebook.com/tr?id=1688040235780349&ev=PageView&noscript=1"
       <div class="rev-card">
         <div class="rev-stars">★★★★★</div>
         <p class="rev-text" id="rev-2-t">Świetny barbershop! Profesjonalna obsługa, miła atmosfera i pełne zaangażowanie w swoją pracę. Fryzjer dokładnie wysłuchał moich oczekiwań.</p>
-        <div class="rev-foot"><div class="rev-name">Dzmitry</div><div class="rev-meta" id="rev-2-m">Strzyżenie · Artem</div></div>
+        <div class="rev-foot"><div class="rev-name">Dzmitry</div><div class="rev-meta" id="rev-2-m">Strzyżenie</div></div>
       </div>
       <div class="rev-card">
         <div class="rev-stars">★★★★★</div>
@@ -950,21 +943,24 @@ const translations = {
     'badge-1':'Відкриті 7 днів на тиждень','badge-2':'Подарункові картки Booksy','badge-3':'Виїзна послуга',
     'week-title':'Не треба чекати до понеділка','week-sub':'Ми відкриті 7 днів на тиждень — обирай час, коли зручно тобі.','week-cta':'Обрати час',
     'masters-eyebrow':'// команда',
-    'm1-price':'Стрижка від 80 зл','m2-price':'Стрижка від 100 зл','m3-price':'Стрижка від 100 зл',
-    'book-1':'Записатися','book-2':'Записатися','book-3':'Записатися',
+    'm1-price':'Стрижка від 80 zł','m3-price':'Стрижка від 110 zł',
+    'book-1':'Записатися','book-3':'Записатися',
     'services-eyebrow':'// прайс',
-    'pop-1':'Стрижка','pop-1-price':'від 80 зл','pop-2':'Борода','pop-3':'Combo','pop-4':'Завивка','pop-4n':'консультація безкоштовна',
+    'pop-1':'Стрижка','pop-1-price':'від 80 zł','pop-2':'Борода','pop-3':'Combo','pop-4':'Завивка','pop-4n':'консультація безкоштовна',
     'trwala-tag':'Завивка / trwała',
     'trwala-title':'Завивка? Спершу безкоштовна консультація',
     'trwala-sub':'Оцінимо волосся, підкажемо результат і скажемо, чи завивка буде гарним вибором.',
     'trwala-cta':'Записатися на консультацію',
     'cennik-summary':'Подивитися всі послуги',
-    's-strzyzenie':'Стрижка (коротке волосся)','s-strzyzenie-p':'80–100 зл',
-    's-broda':'Борода','s-combo':'Combo (фейд + борода)','s-dlugie':'Довге волосся','s-dlugie-broda':'Довге волосся + борода',
-    's-broda-farb':'Борода + фарбування','s-broda-glowa':'Борода + голова на одну довжину','s-ojciec':'Батько + син',
-    's-niedlugie-przy':'Волосся недовге + борода з затемненням','s-dlugie-przy':'Волосся довге + борода з затемненням',
+    's-strzyzenie':'Стрижка (коротке волосся)','s-strzyzenie-p':'80–110 zł',
+    's-strzyz-przy':'Стрижка + затемнення','s-strzyz-dlugie-przy':'Стрижка довге волосся + затемнення',
+    's-dlugie':'Волосся довге','s-dlugie-broda':'Волосся довге + борода',
+    's-dlugie-przy':'Волосся довге + борода з затемненням','s-niedlugie-przy':'Волосся недовге + борода з затемненням',
+    's-combo':'Combo','s-combo-przy':'Combo + борода і волосся з затемненням','s-ojciec':'Батько + син',
+    's-broda':'Борода','s-broda-farb':'Борода + фарбування','s-broda-glowa':'Борода + голова на одну довжину',
+    's-golenie':'Гоління голови під нуль (машинкою)',
     's-pasemka':'Пасма / мелірування','s-trwala':'Хімічна завивка','s-masaz':'Масаж + пілінг голови','s-peeling':'Пілінг обличчя',
-    's-depilacja':'Депіляція воском (ніс/брови/вуха)','s-manicure':'Чоловічий манікюр',
+    's-depilacja':'Депіляція воском (ніс/брови/вуха)',
     'price-note':'Точна вартість залежить від довжини волосся та складності роботи — уточнюйте при записі. Ціна залежить від майстра — уточніть у Booksy при бронюванні.',
     'photo-eyebrow':'// всередині',
     'reviews-eyebrow':'// відгуки',
@@ -972,7 +968,7 @@ const translations = {
     'rev-1-t':'Рекомендую! Повний професіоналізм, а атмосфера — просто вогонь! :))',
     'rev-1-m':'Стрижка · Liliia',
     'rev-2-t':'Чудовий барбершоп! Професійне обслуговування, приємна атмосфера і повна відданість роботі. Майстер уважно вислухав мої побажання.',
-    'rev-2-m':'Стрижка · Artem',
+    'rev-2-m':'Стрижка',
     'rev-3-t':'Дуже комфортний барбершоп, атмосферна музика й інтер’єр, приємні у спілкуванні майстри, які володіють ножицями як кухар ножем. Рекомендую!',
     'rev-3-m':'Завивка · Liliia',
     'rev-cta':'Дивитись відгуки в Google',
