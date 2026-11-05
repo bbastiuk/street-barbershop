@@ -912,13 +912,13 @@
   </div>
   <div>© 2026 Street Barbershop · Rataje 166B/LU-1, Poznań</div>
 <div style="font-size:12px;line-height:1.7;color:var(--grey)">Liliia Yasinska Street Barbershop · NIP: 7831926695 · REGON: 541433177<br>ul. Rataje 166B, 61-168 Poznań · <a href="mailto:streetbarbershop37@gmail.com">streetbarbershop37@gmail.com</a></div>
-<a href="privacy.html">Polityka prywatności / Приватність</a>
-<button class="privacy-button" onclick="document.getElementById('privacy-banner').hidden=false">Ustawienia prywatności / Налаштування</button>
+<a id="privacy-link" href="privacy.html">Polityka prywatności</a>
+<button id="privacy-settings" class="privacy-button" onclick="document.getElementById('privacy-banner').hidden=false">Ustawienia prywatności</button>
 </footer>
-<aside id="privacy-banner" role="region" aria-label="Prywatność / Приватність" hidden>
-<p>Używamy Google Analytics, Google Ads, Meta Pixel i map Google wyłącznie za Twoją zgodą, aby mierzyć ruch i skuteczność reklam. Rezerwacja w Booksy działa również bez zgody. / Аналітику, рекламні пікселі й карту Google вмикаємо лише за згодою, запис працює і без неї. <a href="privacy.html">Szczegóły / Деталі</a></p>
-<button onclick="streetConsent.choose(false)">Tylko niezbędne / Лише необхідні</button>
-<button onclick="streetConsent.choose(true)">Zgadzam się / Погоджуюсь</button>
+<aside id="privacy-banner" role="region" aria-label="Prywatność" hidden>
+<p><span id="privacy-description">Używamy Google Analytics, Google Ads, Meta Pixel i map Google wyłącznie za Twoją zgodą, aby mierzyć ruch i skuteczność reklam. Rezerwacja w Booksy działa również bez zgody.</span> <a id="privacy-details" href="privacy.html">Szczegóły</a></p>
+<button id="privacy-reject" onclick="streetConsent.choose(false)">Tylko niezbędne</button>
+<button id="privacy-accept" onclick="streetConsent.choose(true)">Zgadzam się</button>
 </aside>
 <script src="consent.js"></script>
 
@@ -934,6 +934,13 @@ window.addEventListener('load', function(){
 
 const translations = {
   ua: {
+    'privacy-link':'Політика приватності',
+    'privacy-settings':'Налаштування приватності',
+    'privacy-description':'Ми використовуємо Google Analytics, Google Ads, Meta Pixel і карту Google лише за вашою згодою, щоб вимірювати відвідуваність та ефективність реклами. Запис у Booksy працює і без згоди.',
+    'privacy-details':'Докладніше',
+    'privacy-reject':'Лише необхідні',
+    'privacy-accept':'Погоджуюсь',
+    'map-notice':'Карта Google доступна після згоди на зовнішні сервіси, аналітику та рекламу. Також можна скористатися посиланням «Прокласти маршрут».',
     'nav-about':'Про нас','nav-masters':'Майстри','nav-services':'Послуги','nav-location':'Адреса','nav-cta':'Записатися',
     'mm-about':'Про нас','mm-masters':'Майстри','mm-services':'Послуги і ціни','mm-reviews':'Відгуки','mm-location':'Адреса і графік','mm-book':'Записатися онлайн',
     'hero-cta1':'Записатися онлайн','hero-call':'Подзвонити',
@@ -1011,6 +1018,7 @@ function cacheOriginals(){
 }
 
 function setLang(lang){
+  document.getElementById('privacy-banner').setAttribute('aria-label', lang === 'ua' ? 'Приватність' : 'Prywatność');
   document.getElementById('html-root').lang = lang === 'ua' ? 'uk' : 'pl';
   document.getElementById('btn-pl').classList.toggle('active', lang==='pl');
   document.getElementById('btn-ua').classList.toggle('active', lang==='ua');
