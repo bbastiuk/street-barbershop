@@ -574,14 +574,18 @@
 
   ::selection{background:var(--red);color:var(--white);}
 
-.master-photo.master-photo-vlad{filter:brightness(1.24) saturate(.88)}
-.master-card:hover .master-photo.master-photo-vlad{filter:grayscale(1) brightness(1.24)}
+.master-photo.master-photo-vlad{filter:none}
+.master-card:hover .master-photo.master-photo-vlad{filter:grayscale(1)}
 #privacy-banner{position:fixed;bottom:16px;left:16px;right:16px;z-index:2000;background:#171717;border:1px solid #666;padding:20px;max-width:760px;box-shadow:0 6px 30px #0008}
 #privacy-banner[hidden]{display:none}
 #privacy-banner p{font:14px/1.6 sans-serif;margin-bottom:12px}
 #privacy-banner button,.privacy-button{background:#222;color:#fff;border:1px solid #aaa;padding:12px;cursor:pointer;margin:4px}
 #privacy-banner a{color:#fff;text-decoration:underline}
 #map-notice{padding:16px;font-size:14px;line-height:1.5}
+#privacy-banner #privacy-accept{background:var(--red);border-color:var(--red);font-weight:600}
+#privacy-banner #privacy-accept:hover{background:#b93429;border-color:#f17b70;box-shadow:0 0 12px #d6402c33}
+#privacy-banner button{min-height:46px;padding:12px 18px;font-size:14px}
+#privacy-banner button:focus-visible{outline:2px solid #fff;outline-offset:3px}
 </style>
 <script type="application/ld+json">
 {
@@ -738,7 +742,7 @@
         </div>
       </div>
       <div class="master-card">
-        <img class="master-photo master-photo-vlad" src="assets/vladyslav.jpeg" alt="Vladyslav — barber" loading="lazy">
+        <img class="master-photo master-photo-vlad" src="assets/vladyslav-corrected.jpg" alt="Vladyslav — barber" loading="lazy">
         <div class="master-info">
           <h3>Vladyslav</h3>
           <div class="role" id="m2-price">Strzyżenie od 110 zł</div>
