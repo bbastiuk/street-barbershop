@@ -3,16 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJLEYG99P3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-HJLEYG99P3');
-  gtag('config', 'AW-18356197486');
-  gtag('event', 'conversion', {'send_to': 'AW-18356197486/buIsCKu51NgcEO6w9bBE'});
-</script>
 <meta name="facebook-domain-verification" content="agfqpxtzqnm2ilveempophltt77n3z" />
 <meta name="google-site-verification" content="JS6Im83jOrppgcVJFo82gPvyv1mD6IjQmsbsXJcxmQA" />
 <title>Street Barbershop Poznań — barber, strzyżenie, broda, trwała</title>
@@ -42,23 +32,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1688040235780349');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1688040235780349&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+
 <style>
   :root{
     --bg:#0a0a0a;
@@ -599,6 +573,15 @@ src="https://www.facebook.com/tr?id=1688040235780349&ev=PageView&noscript=1"
   .foot-links{display:flex;gap:20px;justify-content:center;margin-bottom:14px;flex-wrap:wrap;}
 
   ::selection{background:var(--red);color:var(--white);}
+
+.master-photo.master-photo-vlad{filter:brightness(1.24) saturate(.88)}
+.master-card:hover .master-photo.master-photo-vlad{filter:grayscale(1) brightness(1.24)}
+#privacy-banner{position:fixed;bottom:16px;left:16px;right:16px;z-index:2000;background:#171717;border:1px solid #666;padding:20px;max-width:760px;box-shadow:0 6px 30px #0008}
+#privacy-banner[hidden]{display:none}
+#privacy-banner p{font:14px/1.6 sans-serif;margin-bottom:12px}
+#privacy-banner button,.privacy-button{background:#222;color:#fff;border:1px solid #aaa;padding:12px;cursor:pointer;margin:4px}
+#privacy-banner a{color:#fff;text-decoration:underline}
+#map-notice{padding:16px;font-size:14px;line-height:1.5}
 </style>
 <script type="application/ld+json">
 {
@@ -755,7 +738,7 @@ src="https://www.facebook.com/tr?id=1688040235780349&ev=PageView&noscript=1"
         </div>
       </div>
       <div class="master-card">
-        <img class="master-photo" src="assets/vladyslav.jpeg" alt="Vladyslav — barber" loading="lazy">
+        <img class="master-photo master-photo-vlad" src="assets/vladyslav.jpeg" alt="Vladyslav — barber" loading="lazy">
         <div class="master-info">
           <h3>Vladyslav</h3>
           <div class="role" id="m2-price">Strzyżenie od 110 zł</div>
@@ -899,9 +882,9 @@ src="https://www.facebook.com/tr?id=1688040235780349&ev=PageView&noscript=1"
       </div>
     </div>
     <a class="loc-nav" href="https://maps.app.goo.gl/7Zpbabo6Q3wYpXMK8" target="_blank" rel="noopener" data-track="map_click" data-location="location"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.71 11.29 12.71 2.29a1 1 0 0 0-1.42 0l-9 9a1 1 0 0 0 0 1.42l9 9a1 1 0 0 0 1.42 0l9-9a1 1 0 0 0 0-1.42zM14 14.5V12h-4v3H8v-4a1 1 0 0 1 1-1h5V7.5l3.5 3.5z"/></svg><span id="loc-nav">Prowadź w Google Maps</span></a>
-    <div class="map-wrap">
+    <div class="map-wrap"><p id="map-notice">Mapa Google jest dostępna po zgodzie na usługi zewnętrzne, analitykę i marketing. Możesz też użyć linku „Prowadź w Google Maps”.</p>
       <iframe
-        src="https://maps.google.com/maps?q=Rataje%20166B%2C%2061-168%20Pozna%C5%84&z=16&output=embed"
+        data-consent-src="https://maps.google.com/maps?q=Rataje%20166B%2C%2061-168%20Pozna%C5%84&z=16&output=embed"
         width="100%" height="380" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
         title="Street Barbershop — Rataje 166B, Poznań"></iframe>
     </div>
@@ -928,7 +911,16 @@ src="https://www.facebook.com/tr?id=1688040235780349&ev=PageView&noscript=1"
     <a href="https://street-barbershop.booksy.com/h/" target="_blank" rel="noopener" data-track="booking_click" data-location="footer">Booksy</a>
   </div>
   <div>© 2026 Street Barbershop · Rataje 166B/LU-1, Poznań</div>
+<div style="font-size:12px;line-height:1.7;color:var(--grey)">Liliia Yasinska Street Barbershop · NIP: 7831926695 · REGON: 541433177<br>ul. Rataje 166B, 61-168 Poznań · <a href="mailto:streetbarbershop37@gmail.com">streetbarbershop37@gmail.com</a></div>
+<a href="privacy.html">Polityka prywatności / Приватність</a>
+<button class="privacy-button" onclick="document.getElementById('privacy-banner').hidden=false">Ustawienia prywatności / Налаштування</button>
 </footer>
+<aside id="privacy-banner" role="region" aria-label="Prywatność / Приватність" hidden>
+<p>Używamy Google Analytics, Google Ads, Meta Pixel i map Google wyłącznie za Twoją zgodą, aby mierzyć ruch i skuteczność reklam. Rezerwacja w Booksy działa również bez zgody. / Аналітику, рекламні пікселі й карту Google вмикаємо лише за згодою, запис працює і без неї. <a href="privacy.html">Szczegóły / Деталі</a></p>
+<button onclick="streetConsent.choose(false)">Tylko niezbędne / Лише необхідні</button>
+<button onclick="streetConsent.choose(true)">Zgadzam się / Погоджуюсь</button>
+</aside>
+<script src="consent.js"></script>
 
 <script>
 // Always open at the top: disable scroll restoration and drop any leftover #week jump
@@ -1076,6 +1068,7 @@ window.dataLayer = window.dataLayer || [];
 
 // UTM preservation: capture from URL, persist, push to dataLayer, and forward to Booksy links
 (function(){
+  if (!streetConsent.allowed()) return;
   var utmKeys = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
   var params = new URLSearchParams(location.search);
   var fresh = {};
@@ -1102,6 +1095,7 @@ window.dataLayer = window.dataLayer || [];
 // Push a dataLayer event + fire Meta Pixel for every click on a [data-track] element
 document.querySelectorAll('[data-track]').forEach(function(el){
   el.addEventListener('click', function(){
+    if (!streetConsent.allowed()) return;
     var ev = el.dataset.track;
     var loc = el.dataset.location || '';
     var svc = el.dataset.service || '';
@@ -1116,7 +1110,7 @@ document.querySelectorAll('[data-track]').forEach(function(el){
     // Meta Pixel events
     if (typeof fbq === 'function'){
       switch (ev){
-        case 'booking_click':  fbq('track', 'Lead', { content_name: 'booking', source: loc }); break;
+        case 'booking_click': fbq('trackCustom', 'BooksyClick', { source: loc }); gtag('event', 'conversion', {send_to:'AW-18356197486/buIsCKu51NgcEO6w9bBE'}); break;
         case 'phone_click':    fbq('track', 'Contact', { source: loc }); fbq('trackCustom', 'PhoneClick', { source: loc }); break;
         case 'service_click':  fbq('trackCustom', 'ServiceClick', { service: svc, source: loc }); break;
         case 'map_click':      fbq('trackCustom', 'MapClick', { source: loc }); break;
