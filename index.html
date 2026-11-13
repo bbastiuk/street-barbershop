@@ -259,7 +259,7 @@
 
   /* MASTERS */
   .masters-grid{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+    display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
     background:var(--line);margin-top:44px;border:1px solid var(--line);
   }
   .master-card{
@@ -287,6 +287,7 @@
   .master-card:nth-child(3) .master-photo{border-color:var(--red);}
   .master-card h3{font-size:1.2rem;margin-bottom:6px;}
   .master-card .role{color:var(--grey);font-size:0.82rem;text-transform:uppercase;letter-spacing:0.08em;}
+  @media(max-width:1100px){.masters-grid{grid-template-columns:repeat(2,1fr);}}
   @media(max-width:760px){.masters-grid{grid-template-columns:1fr;}}
 
   /* SERVICES */
@@ -742,7 +743,7 @@
         </div>
       </div>
       <div class="master-card">
-        <img class="master-photo master-photo-vlad" src="assets/vladyslav-corrected.jpg" alt="Vladyslav — barber" loading="lazy">
+        <img class="master-photo master-photo-vlad" src="assets/vladyslav.jpeg" alt="Vladyslav — barber" loading="lazy">
         <div class="master-info">
           <h3>Vladyslav</h3>
           <div class="role" id="m2-price">Strzyżenie od 110 zł</div>
@@ -755,6 +756,14 @@
           <h3>Liliia</h3>
           <div class="role" id="m3-price">Strzyżenie od 110 zł</div>
           <a class="master-book" id="book-3" href="https://street-barbershop.booksy.com/h/" target="_blank" rel="noopener" data-track="booking_click" data-location="team_liliia">Umów wizytę</a>
+        </div>
+      </div>
+      <div class="master-card">
+        <img class="master-photo" src="assets/michal.jpeg" alt="Michał — barber" loading="lazy">
+        <div class="master-info">
+          <h3>Michał</h3>
+          <div class="role" id="m4-price">Strzyżenie od 110 zł</div>
+          <a class="master-book" id="book-4" href="https://street-barbershop.booksy.com/h/" target="_blank" rel="noopener" data-track="booking_click" data-location="team_michal">Umów wizytę</a>
         </div>
       </div>
     </div>
@@ -954,8 +963,8 @@ const translations = {
     'badge-1':'Відкриті 7 днів на тиждень','badge-2':'Подарункові картки Booksy','badge-3':'Виїзна послуга',
     'week-title':'Не треба чекати до понеділка','week-sub':'Ми відкриті 7 днів на тиждень — обирай час, коли зручно тобі.','week-cta':'Обрати час',
     'masters-eyebrow':'// команда',
-    'm1-price':'Стрижка від 110 zł','m2-price':'Стрижка від 110 zł','m3-price':'Стрижка від 110 zł',
-    'book-1':'Записатися','book-2':'Записатися','book-3':'Записатися',
+    'm1-price':'Стрижка від 110 zł','m2-price':'Стрижка від 110 zł','m3-price':'Стрижка від 110 zł','m4-price':'Стрижка від 110 zł',
+    'book-1':'Записатися','book-2':'Записатися','book-3':'Записатися','book-4':'Записатися',
     'services-eyebrow':'// прайс',
     'pop-1':'Стрижка','pop-1-price':'від 110 zł','pop-2':'Борода','pop-3':'Combo','pop-4':'Завивка','pop-4n':'консультація безкоштовна',
     'trwala-tag':'Завивка / trwała',
